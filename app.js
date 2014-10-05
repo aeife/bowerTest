@@ -1,4 +1,4 @@
-angular.module('myApp', [])
-    .controller('MainCtrl', function () {
-        this.msg = "Hello, World!";
+angular.module('myApp', ['mySubmodule'])
+    .controller('MainCtrl', function (mySubmoduleService) {
+        this.msg = mySubmoduleService.getMsg();
     });
